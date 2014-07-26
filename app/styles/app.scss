@@ -4,3 +4,31 @@
 .content {
   margin: 20px;
 }
+
+$line-height: 12px;
+$task-height: 200px;
+
+$line-container-height: $line-height + $task-height + 20px;
+
+.line {
+	width: 100%;
+	height: $line-height;
+	background-color: lightgrey;
+	text-align: right;
+	line-height: $line-height;
+	font-size: $line-height;
+}
+
+.line-container {
+	width: 100%;
+	height: $line-container-height;
+}
+
+.task {
+	float: left;
+	margin-right: 10px;
+	width: 150px;
+	max-height: $task-height;
+	border: solid 1px black;
+	overflow: auto;
+}

@@ -1,8 +1,12 @@
 <ul>
   {{#each line in model}}
-  	<p><b>{{line.name}}</b></p>
-  	{{#each task in line.tasks}}
-  		<p>{{task.title}} : {{task.description}}</p>
-  	{{/each}}
+    <div class="line-container">
+      <div class="line"><b>{{line.name}}</b></div>
+      {{#each task in line.tasks}}
+        <div class="task">
+          {{task.title}} : {{task.description}}
+        </div>
+      {{/each}}
+    </div>
   {{/each}}
 </ul>
