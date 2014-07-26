@@ -6,7 +6,7 @@
 }
 
 $line-height: 16px;
-$task-height: 140px;
+$task-height: 50px;
 
 $line-container-height: $line-height + $task-height + 20px;
 
@@ -27,10 +27,10 @@ $line-container-height: $line-height + $task-height + 20px;
 .task {
 	float: left;
 	margin-right: 10px;
-	width: 150px;
+	width: 100px;
 	max-height: $task-height;
 	border: solid 1px black;
-	overflow: auto;
+	overflow: hidden;
 }
 .task-header {
 	margin: 0px 3px;
