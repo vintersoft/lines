@@ -4,7 +4,12 @@
       <div class="line"><b>{{line.name}}</b></div>
       {{#each task in line.tasks}}
         <div class="task">
-          {{task.title}} : {{task.description}}
+          <div class="task-header">
+            {{task.title}}
+          </div>
+          <div class="task-body">
+            {{task.description}}
+          </div>
         </div>
       {{/each}}
     </div>

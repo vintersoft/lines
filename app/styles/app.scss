@@ -5,10 +5,15 @@
   margin: 20px;
 }
 
-$line-height: 12px;
-$task-height: 200px;
+$line-height: 16px;
+$task-height: 140px;
 
 $line-container-height: $line-height + $task-height + 20px;
+
+.line-container {
+	width: 100%;
+	height: $line-container-height;
+}
 
 .line {
 	width: 100%;
@@ -19,11 +24,6 @@ $line-container-height: $line-height + $task-height + 20px;
 	font-size: $line-height;
 }
 
-.line-container {
-	width: 100%;
-	height: $line-container-height;
-}
-
 .task {
 	float: left;
 	margin-right: 10px;
@@ -31,4 +31,11 @@ $line-container-height: $line-height + $task-height + 20px;
 	max-height: $task-height;
 	border: solid 1px black;
 	overflow: auto;
+}
+.task-header {
+	margin: 0px 3px;
+}
+.task-body {
+	font-size: 12px;
+	margin: 0px 3px;
 }
