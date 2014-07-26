@@ -3,6 +3,7 @@
 Router = Ember.Router.extend(location: LinesENV.locationType)
 
 Router.map ->
-	@resource "tasks"
+	@resource "lines", ->
+		@resource "tasks"
 
 `export default Router`
