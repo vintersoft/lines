@@ -31,13 +31,7 @@ $line-container-height: $line-height + $task-height + 20px;
 	max-height: $task-height;
 	border: solid 1px black;
 	overflow: hidden;
-}
-.task-header {
-	margin: 0px 3px;
-}
-.task-body {
-	font-size: 12px;
-	margin: 0px 3px;
+	padding: 0px 3px;
 }
 
 .visible {
