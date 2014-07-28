@@ -1,20 +1,23 @@
-<ul>
-  {{#each line in model}}
-    <div class="line-container">
-      <div class="line"><b>{{line.name}}</b></div>
-      {{#each task in line.tasks}}
-        <div class="task">
-          {{#link-to "task" task}}
-            <div class="task-header">
-              {{task.title}}
-            </div>
-            <div class="task-body">
-            </div>
-          {{/link-to}}
-        </div>
-      {{/each}}
-    </div>
-  {{/each}}
-</ul>
+   
+<div class="content">
+  <ul>
+    {{#each line in model}}
+      <div class="line-container">
+        <div class="line"><b>{{line.name}}</b></div>
+        {{#each task in line.tasks}}
+          <div class="task">
+            {{#link-to "task" task}}
+              <div class="task-header">
+                {{task.title}}
+              </div>
+              <div class="task-body">
+              </div>
+            {{/link-to}}
+          </div>
+        {{/each}}
+      </div>
+    {{/each}}
+  </ul>
+</div>
 
 {{outlet}}
