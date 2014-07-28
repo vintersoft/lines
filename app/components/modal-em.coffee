@@ -18,7 +18,8 @@ ModalEmComponent = Ember.Component.extend
       .slideUp
         complete: ->
           @remove()
-          clone_bg.remove()
+          clone_bg.fadeOut 200, ->
+            clone_bg.remove()
   ).on('willDestroyElement'),
 
 `export default ModalEmComponent`
