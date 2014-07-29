@@ -2,7 +2,7 @@
 
 moduleForModel 'task', 'Task', {
   # Specify the other units that are required for this test.
-  needs: []
+  needs: ["model:line"]
 }
 
 test 'it exists', ->
