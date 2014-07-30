@@ -8,14 +8,14 @@ Line = DS.Model.extend(
 Line.reopenClass
   FIXTURES: [
     {
-      id: 0
+      id: 1
       name: "launo"
-      tasks: [0,1,2]
+      tasks: [1,2,3]
     }
     {
-      id: 1
+      id: 2
       name: "Linea dos"
-      tasks: [3,4]
+      tasks: [4,5]
     }
   ]
 

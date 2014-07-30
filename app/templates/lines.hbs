@@ -3,7 +3,12 @@
   <ul>
     {{#each line in model}}
       <div class="line-container">
-        <div class="line"><b>{{line.name}}</b></div>
+        <div class="line">
+          {{#link-to "line.edit" line}}
+            <b>{{line.name}}</b>
+          {{/link-to}}
+          <i>{{line.desc}}</i>
+        </div>
         {{#each task in line.tasks}}
           <div class="task">
             {{#link-to "task" task}}
