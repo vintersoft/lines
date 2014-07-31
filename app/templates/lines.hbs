@@ -11,7 +11,7 @@
         </div>
         {{#each task in line.tasks}}
           <div class="task">
-            {{#link-to "task" task}}
+            {{#link-to "task" line task}}
               <div class="task-header">
                 {{task.title}}
               </div>
