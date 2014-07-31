@@ -6,6 +6,9 @@ Line = DS.Model.extend(
 )
 
 Line.reopenClass
+  valid: =>
+    @get("name")
+    
   FIXTURES: [
     {
       id: 1
