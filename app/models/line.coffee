@@ -5,9 +5,11 @@ Line = DS.Model.extend(
   tasks: DS.hasMany('task', {async:true})
 )
 
+Line.reopen
+  valid: ->
+    !!@get("name")
+
 Line.reopenClass
-  valid: =>
-    @get("name")
     
   FIXTURES: [
     {

@@ -7,8 +7,7 @@ LineEditController = Ember.ObjectController.extend
     
     save: ->
       line = @get('model')
-      
-      if(!line.valid)
+      if !line.valid()
         alert("Ingrese un nombre")
       else
         line.save().then ( =>
