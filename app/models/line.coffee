@@ -1,13 +1,13 @@
 `import DS from 'ember-data'`
 
 Line = DS.Model.extend(
+  
   name: DS.attr("string")
   tasks: DS.hasMany('task', {async:true})
-)
 
-Line.reopen
   valid: ->
     !!@get("name")
+) 
 
 Line.reopenClass
     
