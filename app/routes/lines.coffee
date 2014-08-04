@@ -20,4 +20,3 @@ LinesRoute = Ember.Route.extend
     })
 
 `export default LinesRoute`
-

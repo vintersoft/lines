@@ -1,9 +1,8 @@
-   
-<div class="content">
+<div class="content" {{action 'clearSelection'}}>
   <ul>
     {{#each line in model}}
       <div class="line-container">
-        <div class="line">
+        <div class="line" {{action 'select' line on="mouseDown"}}>
           {{#link-to "line.edit" line}}
             <b>{{line.name}}</b>
           {{/link-to}}

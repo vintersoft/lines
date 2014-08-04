@@ -2,7 +2,12 @@
 @import "vendor/foundation/scss/foundation.scss";
 
 .content {
-  margin: 20px;
+  padding: 20px;
+  height: 100%;
+}
+
+body > .ember-view {
+	height: 100%;
 }
 
 $line-height: 16px;
@@ -22,6 +27,7 @@ $line-container-height: $line-height + $task-height + 20px;
 	text-align: right;
 	line-height: $line-height;
 	font-size: $line-height;
+	cursor: move;
 }
 
 .task {
