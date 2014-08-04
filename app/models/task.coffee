@@ -1,9 +1,13 @@
 `import DS from 'ember-data'`
 
 Task = DS.Model.extend(
+
   title: DS.attr("string")
   description: DS.attr("string")
   line: DS.belongsTo('line', {async: true})
+
+  valid: ->
+    !!@get("title")
 )
 
 Task.reopenClass
