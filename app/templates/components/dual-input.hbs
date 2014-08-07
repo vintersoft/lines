@@ -1,0 +1,14 @@
+{{#if isShowingRead}}
+
+  <div {{action 'read'}}>
+    {{content}}
+  </div>
+
+{{else}}
+
+  <div>
+    {{textarea value=content}}
+    <button {{action 'submit'}}>OK</button>
+  </div>
+
+{{/if}}
