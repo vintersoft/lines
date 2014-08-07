@@ -20,4 +20,12 @@ LinesController = Ember.ArrayController.extend
       else
         @set("clearable", true)
 
+    createTask: ->
+      @store
+        .createRecord('task', { title: "NewTask", line: @activeLine })
+        .save().then ( (task) =>
+          @activeLine.get("tasks").pushObject(task)
+          @transitionTo('lines')
+        ),( -> )
+
 `export default LinesController`

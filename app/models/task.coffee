@@ -6,6 +6,8 @@ Task = DS.Model.extend(
   description: DS.attr("string")
   line: DS.belongsTo('line', {async: true})
 
+  parent: "line"
+
   valid: ->
     !!@get("title")
 )
