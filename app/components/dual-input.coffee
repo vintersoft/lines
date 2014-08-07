@@ -12,5 +12,4 @@ DualInputComponent = Ember.Component.extend
       @set("isShowingRead", true)
       @sendAction 'edit'
 
-
 `export default DualInputComponent`
