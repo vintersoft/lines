@@ -45,3 +45,7 @@ $line-container-height: $line-height + $task-height + 20px;
 	display: none;
 	opacity: 1;
 }
+
+.dual-input-read {
+	cursor: pointer;
+}

@@ -1,12 +1,12 @@
 {{#if isShowingRead}}
 
-  <div {{action 'read'}}>
+  <div class="dual-input-read" {{action 'read'}}>
     {{es-cape content}}
   </div>
 
 {{else}}
 
-  <div>
+  <div class="dual-input-edit">
     {{textarea value=content}}
     <button {{action 'submit'}}>OK</button>
   </div>
