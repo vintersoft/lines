@@ -9,4 +9,16 @@ TaskController = Ember.ObjectController.extend
     saveDescription: ->
       @get("model").save()
 
+    delete: ->
+      task = @get('model')
+
+      tasksP = task.get("line")
+        .then (line) => line.get "tasks"
+
+      task.destroyRecord()
+        .then( => 
+          tasksP.then (tasks) => tasks.removeObject(task)
+          @transitionToRoute 'lines'
+        )
+
 `export default TaskController`
