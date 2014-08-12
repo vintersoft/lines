@@ -3,7 +3,7 @@
     {{#each line in model}}
       <div class="line-container">
         <div class="line" {{action 'select' line on="mouseDown"}}>
-          {{#link-to "line.edit" line}}
+          {{#link-to "line" line}}
             <b>{{line.name}}</b>
           {{/link-to}}
           <i>{{line.desc}}</i>

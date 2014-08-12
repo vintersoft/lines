@@ -8,6 +8,7 @@ Line = DS.Model.extend
   valid: ->
     !!@get("name")
 
+  isActive: false
 
 Line.reopenClass
     

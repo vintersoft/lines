@@ -1,0 +1,15 @@
+{{#modal-em close="closeModal"}}
+
+  <div class="row">
+    <h3>
+      {{dual-input content=name edit='saveName'}}
+    </h3>
+  </div>
+
+  <div class="row">
+    <a class="right" {{action "delete" id}}>
+      Delete <i class="icon ion-trash-a"></i>
+    </a>
+  </div>
+
+{{/modal-em}}

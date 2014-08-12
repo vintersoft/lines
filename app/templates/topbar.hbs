@@ -2,9 +2,9 @@
   <a href="#" {{action createLine}}>+ New Line</a>
 </li>
 
-{{#if selectedLine}}
+{{#if activeLine}}
   <li>
-    <a href="#">| {{selectedLine.name}} |</a>
+    <a href="#">| {{activeLine.name}} |</a>
   </li>
   <li>
     <a href="#" {{action createTask}}> + New Task </a>

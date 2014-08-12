@@ -2,21 +2,23 @@
 
 LinesController = Ember.ArrayController.extend
   
-  activeLine: null
-  clearable: true
+  activeLine: ( ->
+    active = @find( (line) -> line.isActive )
+  ).property('@each.isActive')
 
-  selectedLine: ( ->
-    @get("activeLine")
-  ).property('activeLine')
+  clearable: true
 
   actions:
     select: (line) ->
-      @set("activeLine", line)
+      if(@get("activeLine") != undefined)
+        @get("activeLine").set("isActive", false)
+      
+      line.set("isActive", true)
       @set("clearable", false)
 
     clearSelection: ->
-      if @get("clearable")
-        @set("activeLine", null)
+      if(@get("clearable") && @get("activeLine") != undefined)
+        @get("activeLine").set("isActive", false)
       else
         @set("clearable", true)
 
