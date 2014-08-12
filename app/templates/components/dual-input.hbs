@@ -1,7 +1,10 @@
 {{#if isShowingRead}}
 
   <div class="dual-input-read" {{action 'read'}}>
-    {{es-cape content}}
+    <div style="float:left;">
+      {{es-cape content}}
+    </div>
+    <span>[edit]</span>
   </div>
 
 {{else}}
