@@ -3,6 +3,10 @@
 DualInputComponent = Ember.Component.extend
   
   isShowingRead: true
+  
+  isEmptyContent: ( ->
+    @content == ""
+  ).property('content')
 
   actions:
     read: ->
@@ -10,7 +14,7 @@ DualInputComponent = Ember.Component.extend
       if openInstance && !openInstance.isDestroyed
         openInstance.set("isShowingRead", true)
       DualInputComponent.openInstance = this
-      @set("isShowingRead", false)    
+      @set("isShowingRead", false)
 
     submit: ->
       @set("isShowingRead", true)

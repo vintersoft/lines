@@ -1,10 +1,14 @@
 {{#if isShowingRead}}
 
   <div class="dual-input-read" {{action 'read'}}>
-    <div style="float:left;">
+    <div class="left">
       {{es-cape content}}
     </div>
-    <span>[edit]</span>
+    {{#if isEmptyContent}}
+      <span class="dual-input-placeholder">Add content</span>
+    {{/if}}
+    <sup>&nbsp;<i class="icon ion-edit"></i></sup>
+    
   </div>
 
 {{else}}

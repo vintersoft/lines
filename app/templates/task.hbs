@@ -1,9 +1,19 @@
 {{#modal-em close="closeModal"}}
-  <h3>
-    {{dual-input content=title edit='saveTitle'}}
-  </h3>
-  
-  {{dual-input content=description edit='saveDescription'}}
 
-  <a {{action "delete"}}>Delete</a>
+  <div class="row">
+    <h3>
+      {{dual-input content=title edit='saveTitle'}}
+    </h3>
+  </div>
+
+  <div class="row">
+    {{dual-input content=description edit='saveDescription'}}
+  </div>
+
+  <div class="row">
+    <a class="right" {{action "delete"}}>
+      Delete <i class="icon ion-trash-a"></i>
+    </a>
+  </div>
+
 {{/modal-em}}

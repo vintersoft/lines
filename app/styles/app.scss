@@ -50,3 +50,16 @@ $line-container-height: $line-height + $task-height + 20px;
 .dual-input-read {
 	cursor: pointer;
 }
+
+.dual-input-placeholder {
+	color: lightgrey;
+}
+
+.dual-input-read:hover .ion-edit {
+	display: inline;
+}
+
+.ion-edit {
+	color: grey;
+	display: none;
+}
