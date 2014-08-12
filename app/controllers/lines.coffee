@@ -24,9 +24,9 @@ LinesController = Ember.ArrayController.extend
 
     createTask: ->
       @store
-        .createRecord('task', { title: "NewTask", line: @activeLine })
+        .createRecord('task', { title: "NewTask", line: @get("activeLine") })
         .save().then ( (task) =>
-          @activeLine.get("tasks").pushObject(task)
+          @get("activeLine").get("tasks").pushObject(task)
           @transitionToRoute('lines')
         ),( -> )
 
