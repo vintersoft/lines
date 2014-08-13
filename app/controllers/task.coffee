@@ -4,12 +4,12 @@ TaskController = Ember.ObjectController.extend
   
   actions:
     saveTitle: ->
-      @get("model").save().then( ( ->
-        ),( ->
-          console.log("fail saving title")
-          @get("model").rollback()
-        )
-      )
+      model = @get("model")
+
+      if(Ember.isEmpty(model.get("title")))
+        model.rollback()
+      else
+        model.save()
 
     saveDescription: ->
       @get("model").save()
