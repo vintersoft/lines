@@ -1,25 +1,33 @@
 `import Ember from 'ember'`
 
+#usage: {{dual-input content=title edit='saveTitle'}}
+
 DualInputComponent = Ember.Component.extend
   
-  isShowingRead: true
+  readMode: true
   
   isEmptyContent: ( ->
-    @content == ""
+    Ember.isEmpty(@content)
   ).property('content')
 
+  originalContent: null
+
   actions:
-    read: ->
+    edit: ->
       openInstance = DualInputComponent.openInstance
       if openInstance && !openInstance.isDestroyed
-        openInstance.set("isShowingRead", true)
+        openInstance.set("readMode", true)
       DualInputComponent.openInstance = this
-      @set("isShowingRead", false)
+      @set("originalContent", @content)
+      @set("readMode", false)
 
     submit: ->
-      @set("isShowingRead", true)
+      @set("readMode", true)
       @sendAction 'edit'
 
+    cancel: ->
+      @set("content", @originalContent)
+      @set("readMode", true)
 
 DualInputComponent.reopenClass
   

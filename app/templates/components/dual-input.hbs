@@ -1,6 +1,6 @@
-{{#if isShowingRead}}
+{{#if readMode}}
 
-  <div class="dual-input-read" {{action 'read'}}>
+  <div class="dual-input-read" {{action 'edit'}}>
     <div class="left">
       {{es-cape content}}
     </div>
@@ -16,6 +16,7 @@
   <div class="dual-input-edit">
     {{textarea value=content}}
     <button {{action 'submit'}}>OK</button>
+    <button {{action 'cancel'}}>Cancel</button>
   </div>
 
 {{/if}}
