@@ -2,7 +2,13 @@
 
   <div class="dual-input-read" {{action 'edit'}}>
     <div class="left">
-      {{mark-down content}}
+
+      {{#if useMarkDown}}
+        {{mark-down content}}
+      {{else}}
+        {{es-cape content}}
+      {{/if}}
+      
     </div>
     {{#if isEmptyContent}}
       <span class="dual-input-placeholder">Add content</span>
