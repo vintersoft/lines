@@ -4,7 +4,7 @@
     {{#each line in model}}
       <div class="line-container">
         
-        <div class="line" {{action 'select' line on="mouseDown"}}>
+        <div class="line" {{action 'select' line bubbles=false}}>
           {{#link-to "line" line}}
             <b>{{line.name}}</b>
           {{/link-to}}

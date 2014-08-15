@@ -6,21 +6,16 @@ LinesController = Ember.ArrayController.extend
     active = @find( (line) -> line.isActive )
   ).property('@each.isActive')
 
-  clearable: true
-
   actions:
     select: (line) ->
       if(@get("activeLine") != undefined)
         @get("activeLine").set("isActive", false)
       
       line.set("isActive", true)
-      @set("clearable", false)
 
     clearSelection: ->
-      if(@get("clearable") && @get("activeLine") != undefined)
+      if(@get("activeLine") != undefined)
         @get("activeLine").set("isActive", false)
-      else
-        @set("clearable", true)
 
     createTask: ->
       @store
