@@ -1,6 +1,6 @@
 `import Ember from 'ember'`
 
-#usage: {{dual-input content=title edit='saveTitle' useMarkDown=true}}
+#usage: {{dual-input content=title edit='saveTitle' useMarkDown=true textAreaRows=10}}
 
 DualInputComponent = Ember.Component.extend
   

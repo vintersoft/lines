@@ -7,13 +7,11 @@
   </div>
 
   <div class="row">
-    {{dual-input content=description edit='saveDescription' useMarkDown=true}}
+    {{dual-input content=description edit='saveDescription' useMarkDown=true textAreaRows=10}}
   </div>
 
   <div class="row">
-    <a class="right" {{action "delete"}}>
-      Delete <i class="icon ion-trash-a"></i>
-    </a>
+    <button class="button right alert small" {{action "delete"}}>Delete <i class="icon ion-trash-a"></i></button>
   </div>
 
 {{/modal-em}}

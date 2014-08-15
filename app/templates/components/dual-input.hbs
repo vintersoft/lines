@@ -8,7 +8,7 @@
       {{else}}
         {{es-cape content}}
       {{/if}}
-      
+
     </div>
     {{#if isEmptyContent}}
       <span class="dual-input-placeholder">Add content</span>
@@ -20,9 +20,15 @@
 {{else}}
 
   <div class="dual-input-edit">
-    {{textarea value=content}}
-    <button {{action 'submit'}}>OK</button>
-    <button {{action 'cancel'}}>Cancel</button>
+    
+    {{#if textAreaRows}}
+      {{textarea value=content rows=textAreaRows}}
+    {{else}}
+      {{textarea value=content}}
+    {{/if}}
+
+    <button class="button small" {{action 'submit'}}>OK</button>
+    <button class="button small" {{action 'cancel'}}>Cancel</button>
   </div>
 
 {{/if}}
