@@ -1,26 +1,40 @@
 <div class="content" {{action 'clearSelection'}}>
   <ul>
+
     {{#each line in model}}
       <div class="line-container">
+        
         <div class="line" {{action 'select' line on="mouseDown"}}>
           {{#link-to "line" line}}
             <b>{{line.name}}</b>
           {{/link-to}}
           <i>{{line.desc}}</i>
         </div>
+        
         {{#each task in line.tasks}}
           <div class="task">
+            
             {{#link-to "task" line task}}
               <div class="task-header">
                 {{task.title}}
               </div>
+              
               <div class="task-body">
               </div>
+              
+              <div class="task-status">
+                {{#if task.description}}
+                  <i class="icon ion-navicon"></i>
+                {{/if}}
+              </div>
             {{/link-to}}
+
           </div>
         {{/each}}
+
       </div>
     {{/each}}
+
   </ul>
 </div>
 
