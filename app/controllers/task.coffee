@@ -15,19 +15,22 @@ TaskController = Ember.ObjectController.extend
       @get("model").save()
 
     delete: ->
-      #TODO: If the server fails
-      task = @get('model')
-      line = task.get("line").content
-      line_tasks = line.get("tasks").content
 
-      task.destroyRecord().then( 
-        ( => 
-          line_tasks.removeObject(task)
-          @transitionToRoute 'lines'
-        ), ( ->
-          #TODO: Hay un bug que no reestablece la relación con line
-          task.rollback()
+      if confirm("¿Está seguro?")
+        #TODO: If the server fails
+        task = @get('model')
+        line = task.get("line").content
+        line_tasks = line.get("tasks").content
+  
+        task.destroyRecord().then( 
+          ( => 
+            line_tasks.removeObject(task)
+            @transitionToRoute 'lines'
+          ),
+          ( ->
+            #TODO: Hay un bug que no reestablece la relación con line
+            task.rollback()
+          )
         )
-      )
 
 `export default TaskController`

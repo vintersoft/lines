@@ -7,14 +7,12 @@ LineController = Ember.ObjectController.extend
       @get("model").save()
 
     delete: ->
-      line = @get('model')
+      if confirm("¿Está seguro?")
       
-      line.destroyRecord().then( 
-        ( =>
-          @transitionToRoute 'lines'
-        ), ( ->
-          line.rollback()
+        line = @get('model')
+        line.destroyRecord().then( 
+          ( => @transitionToRoute 'lines' )
+          ( -> line.rollback() )
         )
-      )
 
 `export default LineController`
