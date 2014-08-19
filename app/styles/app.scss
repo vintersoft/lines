@@ -63,3 +63,10 @@ $line-container-height: $line-height + $task-height + 20px;
 	color: grey;
 	display: none;
 }
+
+.task-done {
+	border-color: grey;
+	a {
+		color: grey;
+	}
+}

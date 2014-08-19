@@ -8,7 +8,7 @@
             b=line.name
         
         each task in line.tasks
-          .task
+          .task class={ task.done:task-done }
             
             link-to "task" line task
               .task-header
