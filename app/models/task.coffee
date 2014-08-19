@@ -4,6 +4,7 @@ Task = DS.Model.extend(
 
   title: DS.attr("string")
   description: DS.attr("string")
+  done: DS.attr("boolean")
   line: DS.belongsTo('line', {async: true})
 
   parent: "line"
