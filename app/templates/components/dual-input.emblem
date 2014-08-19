@@ -1,0 +1,29 @@
+if readMode
+
+  .dual-input-read click="edit"
+
+    .left
+
+      if useMarkDown
+        =mark-down content
+      else
+        es-cape content
+    
+    if isEmptyContent
+      span.dual-input-placeholder Add content
+    
+    sup
+      | &nbsp;
+      i.icon.ion-edit
+
+else
+
+  .dual-input-edit
+    
+    if textAreaRows
+      =textarea value=content rows=textAreaRows
+    else
+      =textarea value=content
+
+    button.button.small click="submit" OK
+    button.button.small click="cancel" Cancel

@@ -1,0 +1,5 @@
+.reveal-modal-bg style="display: block;" click="close"
+
+#modal.reveal-modal.visible
+  == yield
+  a href="#" class="close-reveal-modal" click="close" ×

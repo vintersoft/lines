@@ -1,0 +1,10 @@
+=modal-em close="closeModal"
+
+  .row
+    h3
+      =dual-input content=name edit='saveName'
+
+  .row
+    button.button.right.alert.small click="delete"
+    	| Delete
+    	i.icon.ion-trash-a

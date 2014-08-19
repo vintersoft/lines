@@ -1,0 +1,15 @@
+=modal-em close="closeModal"
+
+  .row
+    h3=dual-input content=title edit='saveTitle'
+
+  .row
+    =dual-input content=description edit='saveDescription' useMarkDown=true textAreaRows=10
+
+  .row
+    =input type="checkbox" name="isDone" checked=done
+
+  .row
+    button.button.right.alert.small click="delete"
+      | Delete
+      i.icon.ion-trash-a

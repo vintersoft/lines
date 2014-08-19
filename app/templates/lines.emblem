@@ -1,0 +1,23 @@
+.content click="clearSelection"
+  ul
+    each line in model
+      .line-container
+        
+        .line click="select line bubbles=false"
+          link-to "line" line
+            b=line.name
+        
+        each task in line.tasks
+          .task
+            
+            link-to "task" line task
+              .task-header
+                =task.title
+              
+              .task-body
+              
+              .task-status
+                if task.description
+                  i.icon.ion-navicon
+
+== outlet

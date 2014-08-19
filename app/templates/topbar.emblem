@@ -1,0 +1,8 @@
+li
+  a href="#" click="createLine" + New Line
+
+if activeLine
+  li
+    a href="#" | {{activeLine.name}} |
+  li
+    a href="#" click="createTask" + New Task
